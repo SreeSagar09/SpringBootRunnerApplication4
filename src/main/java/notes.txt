@@ -1,0 +1,18 @@
+A Program to execute custom runners in desired order by Ordered interface:
+Programs:
+* SpringBootRunnerApplication4Application.java
+* CustomApplicationRunner1.java
+* CustomApplicationRunner2.java
+* CustomCommandLineRunner1.java
+* CustomCommandLineRunner2.java
+Notes:
+* The Ordered Interface is used to define the order to execute the components.
+* It has one abstract method getOrder and return type is int.
+* Higher value has low priority and Lower value has high priority.
+* In multiple custom runners only one runner implemented then that runner is executed first if order is low or high no matter.
+Output:
+From run method in CustomCommandLineRunner2 class.
+From run method in CustomCommandLineRunner1 class.
+From run method in CustomApplicationRunner1 class.
+From run method in CustomApplicationRunner2 class.
+From main method in SpringBootRunnerApplication4Application class.
